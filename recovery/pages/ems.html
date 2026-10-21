@@ -1,0 +1,1355 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<title>EMS protocols &#8211; Vegas Brown, MD</title>
+<meta name='robots' content='max-image-preview:large' />
+<link rel="alternate" type="application/rss+xml" title="Vegas Brown, MD &raquo; Feed" href="https://vegasbrownmd.com/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://vegasbrownmd.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fvegasbrownmd.com%2Fems%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://vegasbrownmd.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fvegasbrownmd.com%2Fems%2F&#038;format=xml" />
+<style id='wp-img-auto-sizes-contain-inline-css'>
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id='wp-emoji-styles-inline-css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id='global-styles-inline-css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:root { --wp--style--global--content-size: 800px;--wp--style--global--wide-size: 1200px; }:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.wp-site-blocks) > * { margin-block-start: 24px; margin-block-end: 0; }:where(.wp-site-blocks) > :first-child { margin-block-start: 0; }:where(.wp-site-blocks) > :last-child { margin-block-end: 0; }:root { --wp--style--block-gap: 24px; }:root :where(.is-layout-flow) > :first-child{margin-block-start: 0;}:root :where(.is-layout-flow) > :last-child{margin-block-end: 0;}:root :where(.is-layout-flow) > *{margin-block-start: 24px;margin-block-end: 0;}:root :where(.is-layout-constrained) > :first-child{margin-block-start: 0;}:root :where(.is-layout-constrained) > :last-child{margin-block-end: 0;}:root :where(.is-layout-constrained) > *{margin-block-start: 24px;margin-block-end: 0;}:root :where(.is-layout-flex){gap: 24px;}:root :where(.is-layout-grid){gap: 24px;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}a:where(:not(.wp-element-button)){text-decoration: underline;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+<link rel='stylesheet' id='hello-elementor-css' href='https://vegasbrownmd.com/wp-content/themes/hello-elementor/assets/css/reset.css?ver=3.4.6' media='all' />
+<link rel='stylesheet' id='hello-elementor-theme-style-css' href='https://vegasbrownmd.com/wp-content/themes/hello-elementor/assets/css/theme.css?ver=3.4.6' media='all' />
+<link rel='stylesheet' id='hello-elementor-header-footer-css' href='https://vegasbrownmd.com/wp-content/themes/hello-elementor/assets/css/header-footer.css?ver=3.4.6' media='all' />
+<link rel='stylesheet' id='elementor-frontend-css' href='https://vegasbrownmd.com/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=4.1.2' media='all' />
+<link rel='stylesheet' id='elementor-post-138-css' href='https://vegasbrownmd.com/wp-content/uploads/elementor/css/post-138.css?ver=1781069624' media='all' />
+<link rel='stylesheet' id='widget-heading-css' href='https://vegasbrownmd.com/wp-content/plugins/elementor/assets/css/widget-heading.min.css?ver=4.1.2' media='all' />
+<link rel='stylesheet' id='elementor-icons-css' href='https://vegasbrownmd.com/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.49.0' media='all' />
+<link rel='stylesheet' id='elementor-post-168-css' href='https://vegasbrownmd.com/wp-content/uploads/elementor/css/post-168.css?ver=1781069624' media='all' />
+<link rel='stylesheet' id='elementor-post-164-css' href='https://vegasbrownmd.com/wp-content/uploads/elementor/css/post-164.css?ver=1781069624' media='all' />
+<script src="https://vegasbrownmd.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script src="https://vegasbrownmd.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<link rel="https://api.w.org/" href="https://vegasbrownmd.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://vegasbrownmd.com/wp-json/wp/v2/pages/52943" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://vegasbrownmd.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.9.4" />
+<link rel="canonical" href="https://vegasbrownmd.com/ems/" />
+<link rel='shortlink' href='https://vegasbrownmd.com/?p=52943' />
+			<style>
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
+					background-image: none !important;
+				}
+				@media screen and (max-height: 1024px) {
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+				@media screen and (max-height: 640px) {
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+			</style>
+			<link rel="icon" href="https://vegasbrownmd.com/wp-content/uploads/2026/01/cropped-vbmd-logo-2-scaled-1-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://vegasbrownmd.com/wp-content/uploads/2026/01/cropped-vbmd-logo-2-scaled-1-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://vegasbrownmd.com/wp-content/uploads/2026/01/cropped-vbmd-logo-2-scaled-1-180x180.png" />
+<meta name="msapplication-TileImage" content="https://vegasbrownmd.com/wp-content/uploads/2026/01/cropped-vbmd-logo-2-scaled-1-270x270.png" />
+</head>
+<body class="wp-singular page-template-default page page-id-52943 wp-embed-responsive wp-theme-hello-elementor hello-elementor-default elementor-default elementor-template-full-width elementor-kit-138 elementor-page elementor-page-52943">
+
+
+<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+		<div data-elementor-type="wp-page" data-elementor-id="52943" class="elementor elementor-52943" data-elementor-post-type="page">
+						<section class="elementor-section elementor-top-section elementor-element elementor-element-5dc23d8 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5dc23d8" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-780bf3b" data-id="780bf3b" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-7231091 elementor-widget elementor-widget-html" data-id="7231091" data-element_type="widget" data-e-type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+					<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EMS Stroke Simulation — Alabama Protocols</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=JetBrains+Mono:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   SCOPED STYLES — all prefixed .ss- to avoid theme conflicts
+   ============================================================ */
+#stroke-sim-root, #stroke-sim-root * { box-sizing: border-box; }
+#stroke-sim-root {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  color: #e2e8f0;
+  background: radial-gradient(circle at 20% 0%, #1e293b 0%, #0a0e14 50%, #050810 100%);
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-size: 14px;
+}
+#stroke-sim-root button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+#stroke-sim-root ul { margin: 0; padding-left: 18px; }
+#stroke-sim-root h1, #stroke-sim-root h2, #stroke-sim-root h3 { margin: 0; }
+#stroke-sim-root p { margin: 0; }
+#stroke-sim-root svg { display: block; }
+
+.ss-display { font-family: 'Bricolage Grotesque', system-ui, sans-serif; letter-spacing: -0.02em; }
+.ss-mono { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+.ss-container { max-width: 640px; margin: 0 auto; padding: 16px; }
+.ss-screen { padding: 20px 0; }
+
+/* Status Bar */
+.ss-statusbar {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 10px 16px;
+  background: rgba(0,0,0,0.3);
+  border-bottom: 1px solid rgba(148,163,184,0.1);
+  position: sticky; top: 0; z-index: 10;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.ss-statusbar .ss-case-num { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #64748b; }
+.ss-statusbar .ss-score { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #f59e0b; font-weight: 600; }
+
+/* Cards */
+.ss-card {
+  background: rgba(15,23,42,0.7);
+  border: 1px solid rgba(148,163,184,0.15);
+  border-radius: 14px;
+  padding: 18px;
+  margin-bottom: 12px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.ss-card.ss-accent-amber { border-color: rgba(245,158,11,0.3); }
+.ss-card.ss-accent-cyan { border-color: rgba(6,182,212,0.3); }
+.ss-card.ss-accent-red { border-color: rgba(239,68,68,0.4); }
+.ss-card.ss-accent-green { border-color: rgba(16,185,129,0.4); }
+
+/* Section Label */
+.ss-section-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  color: #64748b;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: flex; align-items: center; gap: 6px;
+  margin-bottom: 8px;
+}
+
+/* Pills */
+.ss-pill {
+  font-family: 'JetBrains Mono', monospace;
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px; font-weight: 600;
+  letter-spacing: 0.05em; text-transform: uppercase;
+}
+
+/* Buttons */
+.ss-btn {
+  font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+  width: 100%;
+  padding: 13px 18px;
+  border-radius: 10px;
+  font-weight: 600; font-size: 15px;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  letter-spacing: -0.01em;
+  transition: transform 0.1s ease, opacity 0.2s ease;
+  border: 1.5px solid;
+}
+.ss-btn:active { transform: scale(0.98); }
+.ss-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+.ss-btn-primary { background: #f59e0b; color: #0a0e14; border-color: #f59e0b; }
+.ss-btn-ghost { background: transparent; color: #e2e8f0; border-color: rgba(148,163,184,0.3); }
+.ss-btn-info { background: #06b6d4; color: #0a0e14; border-color: #06b6d4; }
+.ss-btn-success { background: #10b981; color: #0a0e14; border-color: #10b981; }
+
+/* Hero / Intro */
+.ss-hero-icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 72px; height: 72px;
+  background: linear-gradient(135deg, #f59e0b, #ef4444);
+  border-radius: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 40px rgba(245,158,11,0.3);
+}
+.ss-hero-title {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 32px; font-weight: 700;
+  line-height: 1.1;
+  background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.03em;
+}
+.ss-hero-sub {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; color: #64748b;
+  letter-spacing: 0.2em; margin-top: 12px;
+  text-transform: uppercase;
+}
+
+/* Provider Picker */
+.ss-provider-btn {
+  width: 100%;
+  display: flex; align-items: center; gap: 14px;
+  padding: 16px;
+  margin-bottom: 10px;
+  background: rgba(15,23,42,0.7);
+  border-radius: 12px;
+  text-align: left;
+  color: #e2e8f0;
+  transition: all 0.15s ease;
+  border: 1.5px solid;
+}
+.ss-provider-btn:hover { transform: translateX(2px); }
+.ss-provider-badge {
+  font-family: 'JetBrains Mono', monospace;
+  width: 40px; height: 40px;
+  border-radius: 10px;
+  color: #0a0e14;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 18px;
+}
+.ss-provider-name { font-family: 'Bricolage Grotesque', sans-serif; font-size: 16px; font-weight: 600; }
+.ss-provider-scope { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #64748b; letter-spacing: 0.05em; margin-top: 2px; }
+
+/* Dispatch */
+.ss-dispatch-box {
+  background: linear-gradient(180deg, rgba(6,182,212,0.15), transparent);
+  border: 1px solid rgba(6,182,212,0.3);
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.ss-pulse-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: #06b6d4;
+  box-shadow: 0 0 12px #06b6d4;
+  animation: ss-pulse 1.5s ease-in-out infinite;
+}
+@keyframes ss-pulse { 0%,100% { opacity: 1 } 50% { opacity: 0.4 } }
+.ss-dispatch-title {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 20px; font-weight: 600;
+  margin: 14px 0 16px;
+  line-height: 1.3;
+}
+.ss-info-row {
+  display: flex; align-items: flex-start; gap: 10px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+.ss-info-label {
+  min-width: 70px;
+  color: #64748b;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  padding-top: 2px;
+}
+.ss-info-value { color: #e2e8f0; flex: 1; }
+
+/* Primary Survey */
+.ss-survey-row {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 13px; margin-bottom: 8px;
+}
+.ss-survey-letter {
+  font-family: 'JetBrains Mono', monospace;
+  width: 22px; height: 22px;
+  border-radius: 6px;
+  background: rgba(245,158,11,0.15);
+  color: #f59e0b;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 12px;
+}
+
+/* Vitals */
+.ss-vital {
+  padding: 10px 12px;
+  background: rgba(0,0,0,0.3);
+  border-radius: 8px;
+  border: 1px solid rgba(148,163,184,0.1);
+}
+.ss-vital-label { font-family: 'JetBrains Mono', monospace; font-size: 9px; color: #64748b; letter-spacing: 0.15em; }
+.ss-vital-value { font-family: 'JetBrains Mono', monospace; font-size: 18px; font-weight: 600; color: #e2e8f0; margin-top: 2px; }
+.ss-vitals-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+/* Time Windows */
+.ss-time-windows { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 12px; }
+.ss-time-window {
+  font-family: 'JetBrains Mono', monospace;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 10px; font-weight: 600;
+  letter-spacing: 0.05em;
+  background: rgba(148,163,184,0.1);
+  color: #64748b;
+  border: 1px solid rgba(148,163,184,0.2);
+}
+.ss-time-window.active { background: #f59e0b; color: #0a0e14; border-color: #f59e0b; }
+.ss-time-window.warning { background: #ef4444; color: #0a0e14; border-color: #ef4444; }
+
+/* EMSA Items */
+.ss-emsa-item { padding: 14px; }
+.ss-emsa-header { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+.ss-emsa-title { font-family: 'Bricolage Grotesque', sans-serif; font-size: 15px; font-weight: 600; }
+.ss-emsa-instr { font-size: 11px; color: #64748b; margin-top: 2px; }
+.ss-emsa-choices { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.ss-score-btn {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1.5px solid rgba(148,163,184,0.2);
+  background: transparent;
+  color: #94a3b8;
+  font-size: 13px; font-weight: 600;
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+}
+.ss-score-btn.active.normal { border-color: #10b981; background: rgba(16,185,129,0.12); color: #10b981; }
+.ss-score-btn.active.abnormal { border-color: #f59e0b; background: rgba(245,158,11,0.12); color: #f59e0b; }
+.ss-feedback { margin-top: 10px; font-size: 12px; }
+.ss-feedback.correct { color: #10b981; }
+.ss-feedback.wrong { color: #ef4444; }
+
+/* Treatment / Action Rows */
+.ss-action-row {
+  width: 100%;
+  display: flex; align-items: flex-start; gap: 12px;
+  padding: 12px 14px; margin-bottom: 8px;
+  background: rgba(15,23,42,0.5);
+  border: 1px solid rgba(148,163,184,0.15);
+  border-radius: 10px;
+  text-align: left;
+  color: #e2e8f0;
+  transition: all 0.15s ease;
+}
+.ss-action-row.selected.correct { background: rgba(16,185,129,0.1); border-color: #10b981; }
+.ss-action-row.selected.wrong { background: rgba(239,68,68,0.1); border-color: #ef4444; }
+.ss-check {
+  width: 20px; height: 20px;
+  border-radius: 5px;
+  border: 1.5px solid #475569;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; margin-top: 1px;
+  background: transparent;
+}
+.ss-action-row.selected.correct .ss-check { background: #10b981; border-color: #10b981; }
+.ss-action-row.selected.wrong .ss-check { background: #ef4444; border-color: #ef4444; }
+.ss-action-label { font-size: 14px; font-weight: 500; }
+.ss-action-note { font-size: 11px; color: #64748b; margin-top: 3px; }
+.ss-action-pitfall { font-size: 11px; color: #fca5a5; margin-top: 3px; }
+
+/* Transport options */
+.ss-transport-btn {
+  width: 100%;
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: 16px; margin-bottom: 10px;
+  background: rgba(15,23,42,0.5);
+  border: 1.5px solid rgba(148,163,184,0.15);
+  border-radius: 12px;
+  text-align: left;
+  color: #e2e8f0;
+}
+.ss-transport-btn.chosen-red { background: rgba(239,68,68,0.12); border-color: #ef4444; }
+.ss-transport-btn.chosen-amber { background: rgba(245,158,11,0.12); border-color: #f59e0b; }
+.ss-transport-btn.chosen-gray { background: rgba(100,116,139,0.12); border-color: #64748b; }
+.ss-transport-btn.chosen-cyan { background: rgba(6,182,212,0.12); border-color: #06b6d4; }
+
+/* Debrief */
+.ss-debrief-icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 60px; height: 60px;
+  border-radius: 16px;
+  margin-bottom: 12px;
+}
+.ss-debrief-icon.win { background: linear-gradient(135deg, #10b981, #059669); }
+.ss-debrief-icon.review { background: linear-gradient(135deg, #f59e0b, #ef4444); }
+.ss-perf-row { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; margin-bottom: 8px; }
+.ss-perf-row.ok { color: #cbd5e1; }
+.ss-perf-row.fail { color: #fca5a5; }
+
+/* Utility */
+.ss-grid-gap-8 { display: grid; gap: 8px; }
+.ss-flex-center { display: flex; align-items: center; justify-content: center; gap: 10px; }
+.ss-text-center { text-align: center; }
+.ss-mb-16 { margin-bottom: 16px; }
+.ss-mb-12 { margin-bottom: 12px; }
+.ss-mb-20 { margin-bottom: 20px; }
+.ss-mt-8 { margin-top: 8px; }
+.ss-text-muted { color: #94a3b8; }
+.ss-text-dim { color: #64748b; }
+
+/* Iframe-friendly: prevent overflow */
+@media (max-width: 480px) {
+  .ss-container { padding: 12px; }
+  .ss-hero-title { font-size: 26px; }
+}
+</style>
+</head>
+<body>
+<div id="stroke-sim-root"></div>
+
+<script>
+(function() {
+  'use strict';
+
+  /* ============================================================
+     SVG ICONS (Lucide-style, inlined)
+     ============================================================ */
+  const ICON = (name, size = 16, color = 'currentColor', stroke = 2) => {
+    const paths = {
+      brain: '<path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/>',
+      activity: '<path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.5.5 0 0 1-.96 0L9.68 3.18a.5.5 0 0 0-.96 0l-2.35 8.36A2 2 0 0 1 4.45 13H2"/>',
+      alertTriangle: '<path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/>',
+      arrowRight: '<path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>',
+      award: '<path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/>',
+      checkCircle: '<path d="M21.801 10A10 10 0 1 1 17 3.335"/><path d="m9 11 3 3L22 4"/>',
+      chevronRight: '<path d="m9 18 6-6-6-6"/>',
+      clock: '<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>',
+      droplet: '<path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/>',
+      eye: '<path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/>',
+      footprints: '<path d="M4 16v-2.38C4 11.5 2.97 10.5 3 8c.03-2.72 1.49-6 4.5-6C9.37 2 10 3.8 10 5.5c0 3.11-2 5.66-2 8.68V16a2 2 0 1 1-4 0Z"/><path d="M20 20v-2.38c0-2.12 1.03-3.12 1-5.62-.03-2.72-1.47-6-4.5-6C14.63 6 14 7.8 14 9.5c0 3.11 2 5.66 2 8.68V20a2 2 0 1 0 4 0Z"/><path d="M16 17h4"/><path d="M4 13h4"/>',
+      hand: '<path d="M18 11V6a2 2 0 0 0-4 0v5"/><path d="M14 10V4a2 2 0 0 0-4 0v6"/><path d="M10 10.5V6a2 2 0 0 0-4 0v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/>',
+      heart: '<path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/>',
+      hospital: '<path d="M12 6v4"/><path d="M14 14h-4"/><path d="M14 18h-4"/><path d="M14 8h-4"/><path d="M18 12h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2h2"/><path d="M18 22V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v18"/>',
+      mapPin: '<path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/>',
+      messageSquare: '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>',
+      mic: '<path d="M12 19v3"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><rect x="9" y="2" width="6" height="13" rx="3"/>',
+      radio: '<path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"/><path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"/><circle cx="12" cy="12" r="2"/><path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"/><path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"/>',
+      refreshCw: '<path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/>',
+      shield: '<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>',
+      siren: '<path d="M7 18v-6a5 5 0 1 1 10 0v6"/><path d="M5 21a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2H5z"/><path d="M21 12h1"/><path d="M18.5 4.5 18 5"/><path d="M2 12h1"/><path d="M12 2v1"/><path d="m4.929 4.929.707.707"/>',
+      smile: '<circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/>',
+      stethoscope: '<path d="M11 2v2"/><path d="M5 2v2"/><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/>',
+      user: '<path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>',
+      xCircle: '<circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/>',
+      zap: '<path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/>',
+    };
+    return `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="${stroke}" stroke-linecap="round" stroke-linejoin="round">${paths[name] || ''}</svg>`;
+  };
+
+  /* ============================================================
+     DATA — Provider levels, Cases, Actions
+     ============================================================ */
+  const PROVIDERS = {
+    E: { code: 'E', name: 'EMT', color: '#22d3ee', scope: 'BLS · Assessment · BG · Airway · Position' },
+    A: { code: 'A', name: 'Advanced EMT', color: '#34d399', scope: '+ IV access · NS bolus' },
+    I: { code: 'I', name: 'Intermediate', color: '#a78bfa', scope: '+ Cardiac monitor · 12-lead' },
+    P: { code: 'P', name: 'Paramedic', color: '#f59e0b', scope: '+ ALS meds · Advanced airway' },
+    C: { code: 'C', name: 'Critical Care', color: '#ef4444', scope: '+ Critical care infusions · RSI' },
+  };
+  const PROVIDER_ORDER = ['E', 'A', 'I', 'P', 'C'];
+  const canDo = (level, required) => {
+    const idx = PROVIDER_ORDER.indexOf(level);
+    return required.some(r => PROVIDER_ORDER.indexOf(r) <= idx);
+  };
+
+  const CASES = [
+    {
+      id: 'lvo-classic',
+      title: 'Sudden Right-Sided Weakness',
+      dispatch: { complaint: 'Possible stroke — sudden weakness', address: '1247 Maple St', age: 72, sex: 'F', notes: 'Caller is daughter. Pt unable to speak clearly.' },
+      scene: '72yo F seated on couch. Right arm hangs limp. Facial droop on right. Daughter present and lucid.',
+      primary: { airway: 'Patent', breathing: 'Adequate, 18', circulation: 'Strong radial', loc: 'Alert, aphasic' },
+      history: { lknMin: 60, lknText: '1 hour ago at breakfast — daughter witnessed onset', pmh: ['Hypertension', 'Atrial fibrillation'], meds: ['Lisinopril', 'Apixaban (anticoagulant)'], allergies: 'NKDA', historian: 'Daughter — willing to ride along' },
+      vitals: { bp: '178/96', hr: 88, rr: 18, spo2: 96 },
+      bg: 110,
+      emsa: { gaze: 1, face: 1, arm: 1, leg: 1, naming: 1, repetition: 1 },
+      truth: {
+        diagnosis: 'Acute Ischemic Stroke — Large Vessel Occlusion (LVO)',
+        destination: 'thrombectomy',
+        reasoning: 'EMSA 6/6 indicates LVO. Within 24-hr thrombectomy window. Anticoagulants are a relative contraindication for tPA but do NOT change EMS destination — pt still needs definitive intervention at a thrombectomy center.',
+        teaching: [
+          'EMSA ≥4 = concern for LVO → route to thrombectomy center if possible',
+          'Bring the daughter or get her cell number — historian is critical',
+          'High BP in acute stroke may be compensatory — do NOT lower without OLMD',
+          'Nothing by mouth (NPO)',
+        ],
+      },
+    },
+    {
+      id: 'hypoglycemia-mimic',
+      title: '"Family says he\'s having a stroke"',
+      dispatch: { complaint: 'Possible stroke', address: '88 Elm Cove', age: 68, sex: 'M', notes: 'Diabetic. Family states sudden weakness and slurred speech.' },
+      scene: '68yo M slumped in recliner. Diaphoretic. Pale. Left arm weak, slurred speech. Wife states he "skipped lunch."',
+      primary: { airway: 'Patent', breathing: 'Adequate, 20', circulation: 'Tachycardic, weak', loc: 'Confused' },
+      history: { lknMin: 30, lknText: '30 min ago — appeared to slump at the table', pmh: ['Type 2 Diabetes (insulin-dependent)', 'HTN'], meds: ['Insulin glargine', 'Metformin', 'Lisinopril'], allergies: 'Sulfa', historian: 'Wife on scene' },
+      vitals: { bp: '142/88', hr: 102, rr: 20, spo2: 98 },
+      bg: 38,
+      emsa: { gaze: 0, face: 0, arm: 1, leg: 0, naming: 1, repetition: 1 },
+      truth: {
+        diagnosis: 'Hypoglycemia (stroke mimic)',
+        destination: 'treat-mimic',
+        reasoning: 'BG 38 mg/dL. Per protocol: "Hypoglycemia can present as stroke-like symptoms with focal neurologic deficits." Treat hypoglycemia FIRST, then reassess neuro. Most likely deficits will resolve once euglycemic. Do NOT enter into stroke system unless deficits persist after correction.',
+        teaching: [
+          'Always check BG on suspected stroke — it can mimic almost any deficit',
+          'Adult hypoglycemia threshold: BG <70',
+          'Treat with oral glucose if alert, D10 IV if not, glucagon IM if no access',
+          'If deficits resolve with glucose → not a stroke; if they persist → enter stroke system',
+        ],
+      },
+    },
+    {
+      id: 'tia-resolved',
+      title: 'Symptoms Came and Went',
+      dispatch: { complaint: 'Sudden weakness — now resolved', address: '5512 Oak Ridge', age: 65, sex: 'F', notes: 'Pt states arm went numb and speech slurred; resolved 10 min ago.' },
+      scene: '65yo F sitting at kitchen table. Appears anxious but currently neurologically intact. Husband concerned.',
+      primary: { airway: 'Patent', breathing: 'Adequate, 16', circulation: 'Strong, regular', loc: 'Alert and oriented x4' },
+      history: { lknMin: 10, lknText: 'Symptoms started ~25 min ago, resolved 10 min ago', pmh: ['HLD', 'Smoker'], meds: ['Atorvastatin'], allergies: 'NKDA', historian: 'Pt able to provide own history' },
+      vitals: { bp: '168/92', hr: 78, rr: 16, spo2: 99 },
+      bg: 95,
+      emsa: { gaze: 0, face: 0, arm: 0, leg: 0, naming: 0, repetition: 0 },
+      truth: {
+        diagnosis: 'Transient Ischemic Attack (TIA)',
+        destination: 'stroke-ready',
+        reasoning: 'EMSA currently 0/6, but the protocol specifically allows EMSP discretion to enter pt into stroke system when "symptoms of stroke occurred and disappeared within a few minutes, even if the patient is presently normal." TIA carries high short-term stroke risk. Document the reason for discretion entry on the e-PCR.',
+        teaching: [
+          'TIA is a warning sign — high risk of completed stroke within days',
+          'EMSP discretion lets you enter pt into stroke system even when currently normal',
+          'Must specifically note "EMSP discretion" and the reason on the e-PCR',
+          'Notify ATCC of the discretion decision',
+        ],
+      },
+    },
+    {
+      id: 'minor-stroke',
+      title: 'Mild Facial Droop, Slurred Speech',
+      dispatch: { complaint: 'Stroke alert', address: '1010 Riverbend', age: 58, sex: 'M', notes: 'Wife noticed slurred speech and one-sided smile.' },
+      scene: '58yo M sitting up, mildly anxious. Subtle L facial droop. Slurred when speaking but words are correct.',
+      primary: { airway: 'Patent', breathing: 'Adequate, 16', circulation: 'Strong, regular', loc: 'Alert, oriented' },
+      history: { lknMin: 30, lknText: '30 min ago — wife was looking right at him when it started', pmh: ['HTN'], meds: ['Amlodipine'], allergies: 'NKDA', historian: 'Wife on scene' },
+      vitals: { bp: '158/94', hr: 76, rr: 16, spo2: 99 },
+      bg: 102,
+      emsa: { gaze: 0, face: 1, arm: 0, leg: 0, naming: 0, repetition: 1 },
+      truth: {
+        diagnosis: 'Acute Ischemic Stroke — Minor / Non-LVO',
+        destination: 'stroke-ready',
+        reasoning: 'EMSA 2/6 — positive for stroke but below LVO threshold (<4). Well within tPA window. Closest stroke-ready center is appropriate; thrombectomy center not specifically indicated unless geographically equivalent.',
+        teaching: [
+          'EMSA <4 → stroke-ready center (tPA capable) is appropriate',
+          'EMSA ≥4 → preferentially thrombectomy center',
+          'Time is brain — 4.5-hr tPA window is hard',
+          'Complete the Thrombolytic Checklist en route',
+        ],
+      },
+    },
+    {
+      id: 'wake-up',
+      title: 'Wake-Up Stroke',
+      dispatch: { complaint: 'Stroke', address: '742 Pine Hollow', age: 82, sex: 'F', notes: 'Husband woke up and found pt with weakness on one side.' },
+      scene: '82yo F in bed. Left-sided hemiparesis, dense. Eyes deviated right. Unable to speak coherently.',
+      primary: { airway: 'Patent', breathing: 'Adequate, 18', circulation: 'Irregularly irregular', loc: 'Awake, aphasic' },
+      history: { lknMin: 480, lknText: 'Last seen normal ~8 hrs ago when she went to bed', pmh: ['Atrial fibrillation', 'HTN', 'CHF'], meds: ['Warfarin', 'Metoprolol', 'Furosemide'], allergies: 'NKDA', historian: 'Husband on scene' },
+      vitals: { bp: '188/100', hr: 70, rr: 18, spo2: 95 },
+      bg: 88,
+      emsa: { gaze: 1, face: 1, arm: 1, leg: 1, naming: 1, repetition: 0 },
+      truth: {
+        diagnosis: 'Acute Ischemic Stroke — LVO (wake-up onset)',
+        destination: 'thrombectomy',
+        reasoning: 'EMSA 5/6 → LVO concern. LKN ~8 hrs ago is OUTSIDE tPA window (4.5 hr) but well within thrombectomy window (24 hr). CHF history means use caution with NS bolus — avoid volume overload.',
+        teaching: [
+          'Last Known Normal — not symptom discovery — is the clock',
+          'Outside tPA window can still benefit from thrombectomy up to 24 hrs',
+          'If signs of CHF / volume overload → hold the fluid bolus',
+          'Warfarin is a relative contraindication for tPA but doesn\'t change EMS destination',
+        ],
+      },
+    },
+    {
+      id: 'posterior',
+      title: '"He\'s Acting Drunk"',
+      dispatch: { complaint: 'Sudden dizziness / unable to walk', address: '33 Cedar Lane', age: 55, sex: 'M', notes: 'Wife says he can\'t stand, vomiting, doesn\'t drink alcohol.' },
+      scene: '55yo M on floor, leaning to one side. Vomited once. Eyes can\'t track smoothly to the right. Otherwise face and limbs grossly symmetric. Slurred but words correct.',
+      primary: { airway: 'Patent', breathing: 'Adequate, 18', circulation: 'Strong, regular', loc: 'Alert, anxious' },
+      history: { lknMin: 45, lknText: '45 min ago — sudden onset while watching TV', pmh: ['HTN', 'Smoker'], meds: ['HCTZ'], allergies: 'NKDA', historian: 'Wife on scene' },
+      vitals: { bp: '162/88', hr: 84, rr: 18, spo2: 97 },
+      bg: 105,
+      emsa: { gaze: 1, face: 0, arm: 0, leg: 0, naming: 0, repetition: 0 },
+      truth: {
+        diagnosis: 'Posterior Circulation Stroke (cerebellar)',
+        destination: 'stroke-ready',
+        reasoning: 'EMSA only 1/6, but the clinical picture — sudden vertigo, ataxia, vomiting, gaze abnormality — is classic for posterior stroke. EMSA can underscore posterior strokes. Use EMSP discretion to enter into stroke system.',
+        teaching: [
+          'EMSA is more sensitive for anterior than posterior strokes',
+          'Sudden vertigo + ataxia + vomiting → think cerebellar stroke',
+          '"Dizziness with new neurologic finding" = stroke until proven otherwise',
+          'EMSP discretion exists for exactly this kind of case',
+        ],
+      },
+    },
+    {
+      id: 'hemorrhagic',
+      title: '"Worst Headache of My Life"',
+      dispatch: { complaint: 'Severe headache, possible stroke', address: '606 Hilltop', age: 60, sex: 'M', notes: 'Pt collapsed after sudden severe headache.' },
+      scene: '60yo M on floor, holding head. Diaphoretic, photophobic. Right-sided weakness. Speech slurred. GCS 13.',
+      primary: { airway: 'Patent', breathing: 'Adequate, 20', circulation: 'Strong, regular', loc: 'Drowsy, follows commands' },
+      history: { lknMin: 20, lknText: '20 min ago — sudden thunderclap headache', pmh: ['Untreated HTN', 'Smoker'], meds: ['None'], allergies: 'NKDA', historian: 'Wife on scene' },
+      vitals: { bp: '224/118', hr: 64, rr: 20, spo2: 97 },
+      bg: 98,
+      emsa: { gaze: 1, face: 1, arm: 1, leg: 1, naming: 0, repetition: 1 },
+      truth: {
+        diagnosis: 'Hemorrhagic Stroke (likely SAH or ICH)',
+        destination: 'thrombectomy',
+        reasoning: 'EMSA 5/6 — LVO threshold met. Hemorrhagic strokes still go to comprehensive stroke centers (neurosurgery + ICU). Thrombolytics are contraindicated, but EMS can\'t reliably distinguish ischemic from hemorrhagic in the field — destination decision is driven by EMSA + clinical severity.',
+        teaching: [
+          '"Thunderclap" + focal deficit + extreme HTN → think hemorrhagic',
+          'Do NOT lower BP without OLMD — protocol is explicit',
+          'Cushing reflex (HTN + bradycardia) suggests increased ICP',
+          'Comprehensive stroke centers have neurosurgery — needed for hemorrhagic',
+        ],
+      },
+    },
+    {
+      id: 'todds',
+      title: 'Post-Seizure Weakness',
+      dispatch: { complaint: 'Seizure, now weak on one side', address: '21 Birchwood', age: 45, sex: 'F', notes: 'Witnessed generalized seizure ~10 min ago. Now confused with arm weakness.' },
+      scene: '45yo F on couch, drowsy, slowly orienting. Tongue bite noted. Right arm weak. Mild dysarthria. Incontinent.',
+      primary: { airway: 'Patent', breathing: 'Adequate, 18', circulation: 'Strong, regular', loc: 'Drowsy, post-ictal' },
+      history: { lknMin: 10, lknText: 'Pre-seizure ~15 min ago. Weakness noted after seizure stopped.', pmh: ['Known seizure disorder', 'Non-compliant with Keppra'], meds: ['Levetiracetam (often missed)'], allergies: 'NKDA', historian: 'Husband — saw whole event' },
+      vitals: { bp: '148/82', hr: 96, rr: 18, spo2: 97 },
+      bg: 92,
+      emsa: { gaze: 0, face: 0, arm: 1, leg: 0, naming: 0, repetition: 1 },
+      truth: {
+        diagnosis: 'Todd\'s Paralysis (post-ictal — stroke mimic)',
+        destination: 'treat-mimic',
+        reasoning: 'Witnessed seizure with known seizure disorder, followed by transient focal weakness = Todd\'s paralysis. Typically resolves within minutes to hours. Per protocol, AMS with another identifiable cause (seizure) should be treated per that protocol first. Reassess en route — if deficits persist or worsen, escalate.',
+        teaching: [
+          'Todd\'s paralysis = post-ictal focal deficit; resolves spontaneously',
+          'Witnessed seizure + known epilepsy + post-ictal deficit = think mimic',
+          'BUT — a stroke can also cause a new seizure. If LKN-well is unclear, treat as stroke',
+          'Reassess neuro frequently; if deficits don\'t improve, enter stroke system',
+        ],
+      },
+    },
+  ];
+
+  const ALL_ACTIONS = [
+    { id: 'monitor', label: 'Place on cardiac monitor', correct: true, levels: ['I', 'P', 'C'], note: 'I/P/C scope.' },
+    { id: 'iv', label: 'Establish large-bore IV access', correct: true, levels: ['A', 'I', 'P', 'C'], note: 'A/I/P/C scope.' },
+    { id: 'fluid', label: 'NS 500 mL crystalloid bolus', correct: true, levels: ['A', 'I', 'P', 'C'], note: 'Hold if signs of CHF / volume overload.' },
+    { id: 'checklist', label: 'Complete Thrombolytic Checklist', correct: true, levels: ['E', 'A', 'I', 'P', 'C'], note: 'Required for all stroke pts.' },
+    { id: 'supine', label: 'Position supine if tolerated', correct: true, levels: ['E', 'A', 'I', 'P', 'C'] },
+    { id: 'npo', label: 'Keep NPO (nothing by mouth)', correct: true, levels: ['E', 'A', 'I', 'P', 'C'] },
+    { id: 'atcc', label: 'Notify ATCC — enter stroke system', correct: true, levels: ['E', 'A', 'I', 'P', 'C'], note: 'As early as possible.' },
+    { id: 'historian', label: "Bring family / get historian's cell #", correct: true, levels: ['E', 'A', 'I', 'P', 'C'] },
+    { id: 'lowerBP', label: 'Administer antihypertensive to lower BP', correct: false, levels: ['P', 'C'], pitfall: 'Protocol: do NOT lower BP without OLMD — high BP may be compensatory.' },
+    { id: 'oralAsa', label: 'Give aspirin 324 mg PO', correct: false, levels: ['E', 'A', 'I', 'P', 'C'], pitfall: "NPO. Don't give anything by mouth — and we can't rule out hemorrhagic in the field." },
+    { id: 'delay', label: 'Wait for symptoms to improve on scene', correct: false, levels: ['E', 'A', 'I', 'P', 'C'], pitfall: 'Time is brain. Load and go.' },
+  ];
+
+  /* ============================================================
+     STATE
+     ============================================================ */
+  const state = {
+    screen: 'intro',
+    provider: null,
+    caseQueue: [],
+    caseIdx: 0,
+    emsaScored: {},
+    bgChecked: false,
+    treatments: [],
+    transport: null,
+    totalScore: 0,
+    totalMax: 0,
+  };
+
+  /* ============================================================
+     HELPERS
+     ============================================================ */
+  const shuffle = (arr) => {
+    const a = [...arr];
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  };
+
+  const formatLKN = (min) => {
+    if (min < 60) return `${min} min`;
+    const h = Math.floor(min / 60);
+    const m = min % 60;
+    return m ? `${h} hr ${m} min` : `${h} hr`;
+  };
+
+  const destLabel = (id) => ({
+    'thrombectomy': 'Comprehensive / Thrombectomy Center',
+    'stroke-ready': 'Primary Stroke-Ready Center',
+    'closest': 'Closest Facility',
+    'treat-mimic': 'Treat mimic & reassess',
+  }[id] || id);
+
+  const scoreCase = () => {
+    const c = state.caseQueue[state.caseIdx];
+    let pts = 0, max = 0;
+    Object.entries(c.emsa).forEach(([k, truth]) => {
+      max += 1;
+      const u = state.emsaScored[k];
+      if ((truth === 1 && u === 'abnormal') || (truth === 0 && u === 'normal')) pts += 1;
+    });
+    max += 2; if (state.bgChecked) pts += 2;
+    ['checklist','atcc','historian','supine','npo'].forEach(id => { max += 1; if (state.treatments.includes(id)) pts += 1; });
+    ['iv','fluid','monitor'].forEach(id => { max += 1; if (state.treatments.includes(id)) pts += 1; });
+    state.treatments.forEach(id => {
+      const a = ALL_ACTIONS.find(x => x.id === id);
+      if (a && !a.correct) pts -= 2;
+    });
+    max += 4;
+    if (state.transport === c.truth.destination) pts += 4;
+    return { points: Math.max(0, pts), max };
+  };
+
+  const escapeHtml = (str) => String(str).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+  /* ============================================================
+     RENDER FUNCTIONS
+     ============================================================ */
+
+  function renderStatusBar() {
+    if (!state.provider || ['intro','provider'].includes(state.screen)) return '';
+    const p = PROVIDERS[state.provider];
+    return `
+      <div class="ss-statusbar">
+        <div class="ss-case-num">CASE ${state.caseIdx + 1}/${state.caseQueue.length}</div>
+        <span class="ss-pill" style="background:${p.color};color:#0a0e14;border:1px solid ${p.color};">${p.name}</span>
+        <div class="ss-score">${state.totalScore}/${state.totalMax || 1} PTS</div>
+      </div>`;
+  }
+
+  function renderIntro() {
+    return `
+      <div class="ss-screen" style="padding-top:40px;">
+        <div class="ss-text-center ss-mb-20">
+          <div class="ss-hero-icon">${ICON('brain', 36, '#0a0e14', 2.4)}</div>
+          <h1 class="ss-hero-title">EMS Stroke<br>Sim</h1>
+          <div class="ss-hero-sub">Alabama EMS Protocols · 11th Edition</div>
+        </div>
+        <div class="ss-card">
+          <div class="ss-section-label">${ICON('activity', 12)} Training Objectives</div>
+          <ul style="font-size:14px;line-height:1.6;color:#cbd5e1;">
+            <li>Run the call from dispatch to handoff</li>
+            <li>Perform the EMSA stroke scale</li>
+            <li>Distinguish stroke from stroke mimics</li>
+            <li>Pick the correct destination & notify ATCC</li>
+          </ul>
+        </div>
+        <div class="ss-card ss-accent-amber">
+          <div class="ss-section-label">${ICON('alertTriangle', 12)} Training Tool — Not Clinical Advice</div>
+          <p style="font-size:13px;line-height:1.5;color:#94a3b8;">
+            Educational simulation only. Always follow your local medical direction and current protocols on real calls. Cases are simplified for training.
+          </p>
+        </div>
+        <button class="ss-btn ss-btn-primary" data-action="start">
+          ${ICON('arrowRight', 17)} Start Shift
+        </button>
+      </div>`;
+  }
+
+  function renderProviderPicker() {
+    return `
+      <div class="ss-screen">
+        <h2 class="ss-display" style="font-size:24px;margin-bottom:6px;">Select your level</h2>
+        <p class="ss-text-muted" style="font-size:14px;margin-bottom:24px;">
+          We'll filter actions to match your scope. Higher levels can do everything lower levels can.
+        </p>
+        ${PROVIDER_ORDER.map(code => {
+          const p = PROVIDERS[code];
+          return `
+            <button class="ss-provider-btn" data-action="pick-provider" data-arg="${code}" style="border-color:${p.color}40;">
+              <div class="ss-provider-badge" style="background:${p.color};">${p.code}</div>
+              <div style="flex:1;">
+                <div class="ss-provider-name">${p.name}</div>
+                <div class="ss-provider-scope">${p.scope}</div>
+              </div>
+              ${ICON('chevronRight', 20, '#64748b')}
+            </button>`;
+        }).join('')}
+      </div>`;
+  }
+
+  function renderDispatch() {
+    const c = state.caseQueue[state.caseIdx];
+    return `
+      <div class="ss-screen">
+        <div class="ss-dispatch-box">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+            <div class="ss-pulse-dot"></div>
+            <span class="ss-pill" style="color:#06b6d4;border:1px solid #06b6d4;">Dispatch · Priority 1</span>
+          </div>
+          <div class="ss-dispatch-title">${escapeHtml(c.dispatch.complaint)}</div>
+          <div class="ss-info-row">
+            ${ICON('mapPin', 14, '#64748b')}
+            <div class="ss-info-label">LOCATION</div>
+            <div class="ss-info-value">${escapeHtml(c.dispatch.address)}</div>
+          </div>
+          <div class="ss-info-row">
+            ${ICON('user', 14, '#64748b')}
+            <div class="ss-info-label">PATIENT</div>
+            <div class="ss-info-value">${c.dispatch.age} y/o ${c.dispatch.sex}</div>
+          </div>
+          <div class="ss-info-row">
+            ${ICON('radio', 14, '#64748b')}
+            <div class="ss-info-label">NOTES</div>
+            <div class="ss-info-value">${escapeHtml(c.dispatch.notes)}</div>
+          </div>
+        </div>
+        <button class="ss-btn ss-btn-primary" data-action="next-screen" data-arg="primary">
+          ${ICON('siren', 17)} En Route
+        </button>
+      </div>`;
+  }
+
+  function renderPrimary() {
+    const c = state.caseQueue[state.caseIdx];
+    return `
+      <div class="ss-screen">
+        <h2 class="ss-display" style="font-size:22px;margin-bottom:4px;">On scene</h2>
+        <p class="ss-text-muted" style="font-size:13px;margin-bottom:16px;">${escapeHtml(c.scene)}</p>
+        <div class="ss-card">
+          <div class="ss-section-label">${ICON('stethoscope', 12)} Primary Survey · ABCDs</div>
+          <div>
+            ${[
+              ['A', 'Airway', c.primary.airway],
+              ['B', 'Breathing', c.primary.breathing],
+              ['C', 'Circulation', c.primary.circulation],
+              ['D', 'Disability/LOC', c.primary.loc],
+            ].map(([l, lbl, v]) => `
+              <div class="ss-survey-row">
+                <div class="ss-survey-letter">${l}</div>
+                <div style="flex:1;color:#94a3b8;font-size:12px;">${lbl}</div>
+                <div class="ss-mono" style="font-size:12px;">${escapeHtml(v)}</div>
+              </div>`).join('')}
+          </div>
+        </div>
+        <div class="ss-card ss-mb-16">
+          <div class="ss-section-label">${ICON('heart', 12)} Vitals</div>
+          <div class="ss-vitals-grid">
+            <div class="ss-vital"><div class="ss-vital-label">BP</div><div class="ss-vital-value">${c.vitals.bp}</div></div>
+            <div class="ss-vital"><div class="ss-vital-label">HR</div><div class="ss-vital-value">${c.vitals.hr}</div></div>
+            <div class="ss-vital"><div class="ss-vital-label">RR</div><div class="ss-vital-value">${c.vitals.rr}</div></div>
+            <div class="ss-vital"><div class="ss-vital-label">SpO₂</div><div class="ss-vital-value">${c.vitals.spo2}%</div></div>
+          </div>
+        </div>
+        <button class="ss-btn ss-btn-primary" data-action="next-screen" data-arg="history">
+          ${ICON('arrowRight', 17)} History & Last Known Normal
+        </button>
+      </div>`;
+  }
+
+  function renderHistory() {
+    const c = state.caseQueue[state.caseIdx];
+    const lknMin = c.history.lknMin;
+    const windows = [
+      { min: 270, label: '<4.5 hr', sub: 'tPA', active: lknMin <= 270 },
+      { min: 360, label: '<6 hr', active: lknMin <= 360 },
+      { min: 1440, label: '<24 hr', sub: 'thrombectomy', active: lknMin <= 1440 },
+      { min: Infinity, label: '>24 hr', warning: true, active: lknMin > 1440 },
+    ];
+    return `
+      <div class="ss-screen">
+        <h2 class="ss-display" style="font-size:22px;margin-bottom:4px;">History</h2>
+        <p class="ss-text-muted" style="font-size:13px;margin-bottom:16px;">
+          Confirm last known normal — this is the clock that drives destination decisions.
+        </p>
+        <div class="ss-card ss-accent-amber">
+          <div class="ss-section-label">${ICON('clock', 12)} Last Known Normal</div>
+          <div class="ss-display" style="font-size:20px;font-weight:600;margin-bottom:6px;">${formatLKN(lknMin)} ago</div>
+          <div style="font-size:13px;color:#94a3b8;line-height:1.5;">${escapeHtml(c.history.lknText)}</div>
+          <div class="ss-time-windows">
+            ${windows.map(w => `
+              <div class="ss-time-window ${w.active ? (w.warning ? 'warning' : 'active') : ''}">
+                ${w.label}${w.sub ? ` <span style="opacity:0.7;">· ${w.sub}</span>` : ''}
+              </div>`).join('')}
+          </div>
+        </div>
+        <div class="ss-card ss-mb-16">
+          <div class="ss-section-label">SAMPLE</div>
+          <div class="ss-grid-gap-8" style="font-size:13px;">
+            ${[
+              ['PMH', c.history.pmh.join(', ')],
+              ['Meds', c.history.meds.join(', ')],
+              ['Allergies', c.history.allergies],
+              ['Historian', c.history.historian],
+            ].map(([lbl, v]) => `
+              <div style="display:flex;gap:10px;">
+                <div class="ss-mono" style="min-width:70px;color:#64748b;font-size:10px;letter-spacing:0.1em;padding-top:2px;">${lbl.toUpperCase()}</div>
+                <div style="color:#e2e8f0;flex:1;">${escapeHtml(v)}</div>
+              </div>`).join('')}
+          </div>
+        </div>
+        <button class="ss-btn ss-btn-primary" data-action="next-screen" data-arg="emsa">
+          ${ICON('arrowRight', 17)} Perform EMSA Stroke Scale
+        </button>
+      </div>`;
+  }
+
+  function renderEMSA() {
+    const c = state.caseQueue[state.caseIdx];
+    const items = [
+      { id: 'gaze', icon: 'eye', label: 'Horizontal Gaze', instr: 'Ask pt to follow your finger left to right with eyes' },
+      { id: 'face', icon: 'smile', label: 'Facial Weakness', instr: 'Ask pt to show teeth or smile' },
+      { id: 'arm', icon: 'hand', label: 'Arm Drift', instr: 'Hold both arms out, palms up, 10 sec, eyes closed' },
+      { id: 'leg', icon: 'footprints', label: 'Leg Weakness', instr: 'Lift each leg for 5 seconds' },
+      { id: 'naming', icon: 'messageSquare', label: 'Naming', instr: 'Ask pt to name your watch or pen' },
+      { id: 'repetition', icon: 'mic', label: 'Repetition', instr: '"They heard him speak on the radio last night"' },
+    ];
+    const total = items.reduce((s, i) => s + (state.emsaScored[i.id] === 'abnormal' ? 1 : 0), 0);
+    const allScored = items.every(i => state.emsaScored[i.id] !== undefined);
+    const remaining = items.filter(i => state.emsaScored[i.id] === undefined).length;
+
+    return `
+      <div class="ss-screen">
+        <h2 class="ss-display" style="font-size:22px;margin-bottom:4px;">EMSA Stroke Scale</h2>
+        <p class="ss-text-muted" style="font-size:13px;margin-bottom:16px;">
+          Tap each finding. ≥4 abnormal = concern for LVO stroke.
+        </p>
+        ${items.map(item => {
+          const s = state.emsaScored[item.id];
+          const truth = c.emsa[item.id];
+          let feedbackHtml = '';
+          if (s !== undefined) {
+            const correct = (truth === 1 && s === 'abnormal') || (truth === 0 && s === 'normal');
+            let msg = '';
+            if (truth === 1) msg = s === 'abnormal' ? '✓ Correct — abnormal finding' : '✗ Missed — pt does show this finding';
+            else msg = s === 'normal' ? '✓ Correct — finding is normal' : '✗ Overcalled — this finding is normal';
+            feedbackHtml = `<div class="ss-feedback ${correct ? 'correct' : 'wrong'}">${msg}</div>`;
+          }
+          return `
+            <div class="ss-card ss-emsa-item">
+              <div class="ss-emsa-header">
+                ${ICON(item.icon, 18, '#94a3b8')}
+                <div style="flex:1;">
+                  <div class="ss-emsa-title">${item.label}</div>
+                  <div class="ss-emsa-instr">${escapeHtml(item.instr)}</div>
+                </div>
+              </div>
+              <div class="ss-emsa-choices">
+                <button class="ss-score-btn ${s === 'normal' ? 'active normal' : ''}" data-action="emsa-score" data-arg="${item.id}|normal">
+                  ${s === 'normal' && truth === 0 ? ICON('checkCircle', 14, '#10b981') : ''}
+                  ${s === 'normal' && truth === 1 ? ICON('xCircle', 14, '#ef4444') : ''}
+                  Normal
+                </button>
+                <button class="ss-score-btn ${s === 'abnormal' ? 'active abnormal' : ''}" data-action="emsa-score" data-arg="${item.id}|abnormal">
+                  ${s === 'abnormal' && truth === 1 ? ICON('checkCircle', 14, '#10b981') : ''}
+                  ${s === 'abnormal' && truth === 0 ? ICON('xCircle', 14, '#ef4444') : ''}
+                  Abnormal
+                </button>
+              </div>
+              ${feedbackHtml}
+            </div>`;
+        }).join('')}
+        <div class="ss-card ss-mb-16" style="border-color:${total >= 4 ? '#ef4444' : 'rgba(245,158,11,0.3)'};">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <div class="ss-section-label">Total Score</div>
+            ${allScored && total >= 4 ? `<span class="ss-pill" style="background:#ef4444;color:#0a0e14;">LVO concern</span>` : ''}
+          </div>
+          <div class="ss-mono" style="font-size:36px;font-weight:700;color:${total >= 4 ? '#ef4444' : '#f59e0b'};">
+            ${total} <span style="color:#64748b;font-size:20px;">/ 6</span>
+          </div>
+        </div>
+        <button class="ss-btn ss-btn-primary" data-action="next-screen" data-arg="treatment" ${allScored ? '' : 'disabled'}>
+          ${ICON('arrowRight', 17)} ${allScored ? 'Continue to Treatment' : `Assess all 6 items (${remaining} left)`}
+        </button>
+      </div>`;
+  }
+
+  function renderTreatment() {
+    const c = state.caseQueue[state.caseIdx];
+    const provider = state.provider;
+    const available = ALL_ACTIONS.filter(a => canDo(provider, a.levels));
+
+    const bgCard = !state.bgChecked
+      ? `<div class="ss-card">
+           <div class="ss-section-label">${ICON('droplet', 12)} Blood Glucose</div>
+           <button class="ss-btn ss-btn-info" data-action="check-bg">${ICON('droplet', 17)} Check Blood Glucose</button>
+         </div>`
+      : `<div class="ss-card" style="border-color:${c.bg < 70 ? '#ef4444' : 'rgba(16,185,129,0.4)'};">
+           <div class="ss-section-label">${ICON('droplet', 12)} Blood Glucose</div>
+           <div class="ss-mono" style="font-size:28px;font-weight:700;color:${c.bg < 70 ? '#ef4444' : '#10b981'};">
+             ${c.bg} <span style="font-size:14px;color:#64748b;">mg/dL</span>
+           </div>
+           ${c.bg < 70 ? `
+             <div style="margin-top:8px;padding:10px;background:rgba(239,68,68,0.1);border-radius:8px;font-size:12px;color:#fca5a5;">
+               <strong>HYPOGLYCEMIA</strong> — treat per Hypoglycemia Protocol first. This may be a stroke mimic. Reassess neuro after correction.
+             </div>` : ''}
+         </div>`;
+
+    return `
+      <div class="ss-screen">
+        <h2 class="ss-display" style="font-size:22px;margin-bottom:4px;">Treatment</h2>
+        <p class="ss-text-muted" style="font-size:13px;margin-bottom:16px;">
+          Select actions appropriate for ${PROVIDERS[provider].name}. Wrong choices cost points.
+        </p>
+        ${bgCard}
+        <div style="margin-top:12px;margin-bottom:12px;">
+          ${available.map(a => {
+            const selected = state.treatments.includes(a.id);
+            const klass = selected ? `selected ${a.correct ? 'correct' : 'wrong'}` : '';
+            return `
+              <button class="ss-action-row ${klass}" data-action="toggle-treatment" data-arg="${a.id}">
+                <div class="ss-check">
+                  ${selected && a.correct ? ICON('checkCircle', 14, '#0a0e14') : ''}
+                  ${selected && !a.correct ? ICON('xCircle', 14, '#fff') : ''}
+                </div>
+                <div style="flex:1;">
+                  <div class="ss-action-label">${escapeHtml(a.label)}</div>
+                  ${selected && a.note ? `<div class="ss-action-note">${escapeHtml(a.note)}</div>` : ''}
+                  ${selected && a.pitfall ? `<div class="ss-action-pitfall">⚠ ${escapeHtml(a.pitfall)}</div>` : ''}
+                </div>
+              </button>`;
+          }).join('')}
+        </div>
+        <button class="ss-btn ss-btn-primary" data-action="next-screen" data-arg="transport" ${state.bgChecked ? '' : 'disabled'}>
+          ${ICON('arrowRight', 17)} ${state.bgChecked ? 'Make Transport Decision' : 'Check BG first'}
+        </button>
+      </div>`;
+  }
+
+  function renderTransport() {
+    const options = [
+      { id: 'thrombectomy', label: 'Comprehensive / Thrombectomy Center', sub: 'Neurosurg, neuro-IR, ICU', icon: 'hospital', color: '#ef4444', chosenClass: 'chosen-red', note: 'For EMSA ≥4 (LVO concern) within 24 hr LKN' },
+      { id: 'stroke-ready', label: 'Primary Stroke-Ready Center', sub: 'tPA capable, CT, neurology', icon: 'hospital', color: '#f59e0b', chosenClass: 'chosen-amber', note: 'For positive EMSA without LVO, or LVO unavailable' },
+      { id: 'closest', label: 'Closest Facility', sub: 'ED only', icon: 'hospital', color: '#64748b', chosenClass: 'chosen-gray', note: 'Only if airway loss, hemodynamic instability, or uncontrolled bleeding' },
+      { id: 'treat-mimic', label: 'Treat & Reassess (stroke mimic)', sub: 'If BG corrected or other cause identified', icon: 'shield', color: '#06b6d4', chosenClass: 'chosen-cyan', note: 'If mimic resolves, may downgrade. If persists, enter stroke system.' },
+    ];
+
+    return `
+      <div class="ss-screen">
+        <h2 class="ss-display" style="font-size:22px;margin-bottom:4px;">Transport Decision</h2>
+        <p class="ss-text-muted" style="font-size:13px;margin-bottom:16px;">
+          Notify ATCC of your decision and any EMSP discretion entry.
+        </p>
+        ${options.map(opt => {
+          const isChosen = state.transport === opt.id;
+          return `
+            <button class="ss-transport-btn ${isChosen ? opt.chosenClass : ''}" data-action="choose-transport" data-arg="${opt.id}">
+              ${ICON(opt.icon, 20, isChosen ? opt.color : '#64748b')}
+              <div style="flex:1;">
+                <div class="ss-display" style="font-size:15px;font-weight:600;">${escapeHtml(opt.label)}</div>
+                <div style="font-size:11px;color:#64748b;margin-top:2px;">${escapeHtml(opt.sub)}</div>
+                <div style="font-size:11px;color:#94a3b8;margin-top:6px;font-style:italic;">${escapeHtml(opt.note)}</div>
+              </div>
+            </button>`;
+        }).join('')}
+        <button class="ss-btn ss-btn-primary" data-action="finish-case" ${state.transport ? '' : 'disabled'}>
+          ${ICON('siren', 17)} Confirm Transport & Notify ATCC
+        </button>
+      </div>`;
+  }
+
+  function renderDebrief() {
+    const c = state.caseQueue[state.caseIdx];
+    const truth = c.truth;
+    const correctDest = state.transport === truth.destination;
+    const emsaTotal = Object.values(c.emsa).reduce((a, b) => a + b, 0);
+    const userEmsaTotal = Object.entries(state.emsaScored).filter(([k, v]) => v === 'abnormal' && c.emsa[k] === 1).length;
+    const wrongActions = state.treatments.filter(id => !ALL_ACTIONS.find(a => a.id === id)?.correct);
+    const isLast = state.caseIdx + 1 >= state.caseQueue.length;
+
+    const perfRows = [
+      { ok: userEmsaTotal === emsaTotal, label: `EMSA assessment: ${userEmsaTotal}/${emsaTotal} abnormal findings identified` },
+      { ok: state.bgChecked, label: state.bgChecked ? 'Blood glucose obtained' : 'Did not check blood glucose' },
+      { ok: state.treatments.includes('checklist'), label: state.treatments.includes('checklist') ? 'Thrombolytic Checklist completed' : 'Missed: Thrombolytic Checklist' },
+      { ok: state.treatments.includes('atcc'), label: state.treatments.includes('atcc') ? 'ATCC notified — stroke system entry' : 'Missed: ATCC notification' },
+      { ok: correctDest, label: `Transport: ${correctDest ? 'Correct destination' : 'Incorrect — should have been ' + destLabel(truth.destination)}` },
+    ];
+    if (wrongActions.length > 0) {
+      perfRows.push({ ok: false, label: `Selected ${wrongActions.length} contraindicated action(s)` });
+    }
+
+    return `
+      <div class="ss-screen">
+        <div class="ss-text-center ss-mb-20">
+          <div class="ss-debrief-icon ${correctDest ? 'win' : 'review'}">
+            ${correctDest ? ICON('award', 28, '#0a0e14') : ICON('alertTriangle', 28, '#0a0e14')}
+          </div>
+          <h2 class="ss-display" style="font-size:22px;">
+            ${correctDest ? 'Case Complete' : 'Case Complete — Review'}
+          </h2>
+          <div class="ss-mono" style="font-size:11px;color:#64748b;margin-top:6px;letter-spacing:0.1em;">
+            ${escapeHtml(c.title.toUpperCase())}
+          </div>
+        </div>
+        <div class="ss-card ss-accent-amber">
+          <div class="ss-section-label">${ICON('brain', 12)} True Diagnosis</div>
+          <div class="ss-display" style="font-size:18px;font-weight:600;margin-bottom:8px;">
+            ${escapeHtml(truth.diagnosis)}
+          </div>
+          <div style="font-size:13px;color:#cbd5e1;line-height:1.6;">${escapeHtml(truth.reasoning)}</div>
+        </div>
+        <div class="ss-card">
+          <div class="ss-section-label">${ICON('activity', 12)} Your Performance</div>
+          <div style="margin-top:8px;">
+            ${perfRows.map(r => `
+              <div class="ss-perf-row ${r.ok ? 'ok' : 'fail'}">
+                ${ICON(r.ok ? 'checkCircle' : 'xCircle', 16, r.ok ? '#10b981' : '#ef4444')}
+                <div>${escapeHtml(r.label)}</div>
+              </div>`).join('')}
+          </div>
+        </div>
+        <div class="ss-card ss-accent-cyan ss-mb-16">
+          <div class="ss-section-label">${ICON('zap', 12)} Key Teaching Points</div>
+          <ul style="margin-top:8px;font-size:13px;line-height:1.7;color:#cbd5e1;">
+            ${truth.teaching.map(t => `<li>${escapeHtml(t)}</li>`).join('')}
+          </ul>
+        </div>
+        <button class="ss-btn ss-btn-primary" data-action="next-case">
+          ${ICON(isLast ? 'refreshCw' : 'arrowRight', 17)} ${isLast ? 'Restart Shift' : 'Next Call'}
+        </button>
+      </div>`;
+  }
+
+  /* ============================================================
+     MAIN RENDER
+     ============================================================ */
+  function render() {
+    const root = document.getElementById('stroke-sim-root');
+    if (!root) return;
+    let html = renderStatusBar() + '<div class="ss-container">';
+    switch (state.screen) {
+      case 'intro': html += renderIntro(); break;
+      case 'provider': html += renderProviderPicker(); break;
+      case 'dispatch': html += renderDispatch(); break;
+      case 'primary': html += renderPrimary(); break;
+      case 'history': html += renderHistory(); break;
+      case 'emsa': html += renderEMSA(); break;
+      case 'treatment': html += renderTreatment(); break;
+      case 'transport': html += renderTransport(); break;
+      case 'debrief': html += renderDebrief(); break;
+    }
+    html += '</div>';
+    root.innerHTML = html;
+    // Scroll to top on screen change for iframe contexts
+    if (root.scrollTop !== undefined) root.scrollTop = 0;
+  }
+
+  /* ============================================================
+     EVENT HANDLING (delegated)
+     ============================================================ */
+  document.addEventListener('click', (e) => {
+    const target = e.target.closest('[data-action]');
+    if (!target) return;
+    const action = target.dataset.action;
+    const arg = target.dataset.arg;
+
+    switch (action) {
+      case 'start':
+        state.screen = 'provider';
+        render();
+        break;
+      case 'pick-provider':
+        state.provider = arg;
+        state.caseQueue = shuffle(CASES);
+        state.caseIdx = 0;
+        state.totalScore = 0;
+        state.totalMax = 0;
+        resetCaseState();
+        state.screen = 'dispatch';
+        render();
+        break;
+      case 'next-screen':
+        state.screen = arg;
+        render();
+        break;
+      case 'emsa-score': {
+        const [id, val] = arg.split('|');
+        state.emsaScored[id] = val;
+        render();
+        break;
+      }
+      case 'check-bg':
+        state.bgChecked = true;
+        render();
+        break;
+      case 'toggle-treatment':
+        if (state.treatments.includes(arg)) {
+          state.treatments = state.treatments.filter(x => x !== arg);
+        } else {
+          state.treatments.push(arg);
+        }
+        render();
+        break;
+      case 'choose-transport':
+        state.transport = arg;
+        render();
+        break;
+      case 'finish-case': {
+        const { points, max } = scoreCase();
+        state.totalScore += points;
+        state.totalMax += max;
+        state.screen = 'debrief';
+        render();
+        break;
+      }
+      case 'next-case':
+        if (state.caseIdx + 1 >= state.caseQueue.length) {
+          state.caseQueue = shuffle(CASES);
+          state.caseIdx = 0;
+          state.totalScore = 0;
+          state.totalMax = 0;
+        } else {
+          state.caseIdx += 1;
+        }
+        resetCaseState();
+        state.screen = 'dispatch';
+        render();
+        break;
+    }
+  });
+
+  function resetCaseState() {
+    state.emsaScored = {};
+    state.bgChecked = false;
+    state.treatments = [];
+    state.transport = null;
+  }
+
+  /* ============================================================
+     INIT
+     ============================================================ */
+  state.caseQueue = shuffle(CASES);
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', render);
+  } else {
+    render();
+  }
+})();
+</script>
+</body>
+</html>				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+				<footer data-elementor-type="footer" data-elementor-id="164" class="elementor elementor-164 elementor-location-footer" data-elementor-post-type="elementor_library">
+					<section class="elementor-section elementor-top-section elementor-element elementor-element-9809c0c elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="9809c0c" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-cdea375" data-id="cdea375" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-47afcdc elementor-widget elementor-widget-html" data-id="47afcdc" data-element_type="widget" data-e-type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+					<span id="siteseal"><script async type="text/javascript" src="https://seal.starfieldtech.com/getSeal?sealID=pVwkbgKEZmdaA7RPDhLYHYw8BFQfwRxi664zRlSCISaaY0xAW2qneZeTwzXG"></script></span>				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-4bce6a07 elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="4bce6a07" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-26552d00" data-id="26552d00" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-46e13bb6 elementor-widget elementor-widget-heading" data-id="46e13bb6" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default">@2026 Copyright Vegas Brown, MD Professional Association- All Rights Reserved</p>				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</footer>
+		
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/hello-elementor/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<div id="wpconsent-root" style="--wpconsent-z-index: 900000; --wpconsent-background: #04194e; --wpconsent-text: #ffffff; --wpconsent-outline-color: rgba(255, 255, 255, 0.2); --wpconsent-accept-bg: #ffcd2a; --wpconsent-cancel-bg: #ffffff; --wpconsent-preferences-bg: #ffffff; --wpconsent-accept-color: #000000; --wpconsent-cancel-color: #000000; --wpconsent-preferences-color: #000000; --wpconsent-font-size: 16px;"><div id="wpconsent-container" style="display: none;"></div><template id="wpconsent-template"><div class="wpconsent-banner-holder wpconsent-banner-long wpconsent-banner-long-bottom" id="wpconsent-banner-holder" tabindex="-1" role="dialog" aria-labelledby="wpconsent-banner-title"><div class="wpconsent-banner" part="wpconsent-banner"><button class="wpconsent-banner-close" id="wpconsent-banner-close" aria-label="Close"><svg class="wpconsent-icon wpconsent-icon-close" width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><path d="M1.68421 12L0 10.3158L4.33083 5.98496L0 1.68421L1.68421 0L6.01504 4.33083L10.3158 0L12 1.68421L7.66917 5.98496L12 10.3158L10.3158 12L6.01504 7.66917L1.68421 12Z" fill="white" /></svg></button><div class="wpconsent-banner-body" part="wpconsent-banner-body"><h2 id="wpconsent-banner-title" class="screen-reader-text">Cookie Consent</h2><div class="wpconsent-banner-message" tabindex="0"><p>We use cookies to improve your experience on our site. By using our site, you consent to cookies.</p>
+</div></div><div class="wpconsent-banner-footer wpconsent-button-size-small wpconsent-button-corner-slightly-rounded wpconsent-button-type-filled" part="wpconsent-banner-footer"><button type="button" id="wpconsent-preferences-all" class="wpconsent-preferences-cookies wpconsent-banner-button wpconsent-preferences-all" part="wpconsent-button-preferences">Preferences</button><button type="button" id="wpconsent-cancel-all" class="wpconsent-cancel-cookies wpconsent-banner-button wpconsent-cancel-all" part="wpconsent-button-cancel">Reject</button><button type="button" id="wpconsent-accept-all" class="wpconsent-accept-cookies wpconsent-banner-button wpconsent-accept-all" part="wpconsent-button-accept">Accept All</button></div><div class="wpconsent-powered-by"><a style="color: #ffffff" href="https://wpconsent.com/powered-by/?utm_source=liteplugin&#038;utm_medium=poweredby&#038;utm_campaign" target="_blank" rel="nofollow noopener noreferrer"><span class="wpconsent-powered-by-text">Powered by</span> <svg class="wpconsent-icon wpconsent-icon-logo-mono" width="80" height="12" viewBox="0 0 57 9" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)" fill="#ffffff"><path d="M4.84 1.006a.34.34 0 0 0-.333-.34H2.564a.336.336 0 0 0-.292.172L.735 3.566a.336.336 0 0 0 .293.501h1.94a.342.342 0 0 0 .292-.173l1.531-2.713H4.79a.333.333 0 0 0 .05-.175ZM11.628 4.545a.33.33 0 0 0-.048-.171L9.76 1.144 8.403 3.547l.474.84a.33.33 0 0 1 .003.314L7.09 7.88a.341.341 0 0 0 .272.539h1.937a.336.336 0 0 0 .292-.17l2.005-3.558-.003-.002a.34.34 0 0 0 .034-.145h.002Z" /><path d="M9.76 1.144 9.493.667 8.17 2.994l-.038.066-.294.518a.34.34 0 0 1 .569-.03L9.76 1.144ZM6.995.667h-.012a.336.336 0 0 0-.303.19l-2.636 4.66a.345.345 0 0 1-.299.175.348.348 0 0 1-.303-.183l-.447-.792a.337.337 0 0 0-.294-.171l-1.936.006a.336.336 0 0 0-.293.5l1.802 3.199c.06.105.171.17.293.17h2.314c.129 0 .239-.071.297-.178L6.832 5.34l1.002-1.762.294-.518.038-.066L9.49.667H6.995ZM13.896 1.921c0-.148.053-.274.157-.378a.518.518 0 0 1 .38-.155c.136 0 .247.038.334.114.087.077.144.161.17.253l1.065 3.843 1.041-3.825a.48.48 0 0 1 .188-.28.516.516 0 0 1 .627.002c.096.072.16.167.188.285l1.041 3.825 1.076-3.856a.523.523 0 0 1 .501-.36.51.51 0 0 1 .37.151.508.508 0 0 1 .154.374.505.505 0 0 1-.027.163L19.596 7.32a.518.518 0 0 1-.488.375.47.47 0 0 1-.31-.11.546.546 0 0 1-.182-.285l-1.057-3.747-1.053 3.749a.525.525 0 0 1-.19.283.51.51 0 0 1-.325.11.514.514 0 0 1-.315-.102.5.5 0 0 1-.19-.264l-1.564-5.242a.514.514 0 0 1-.027-.165h.002ZM21.94 7.167V1.992c0-.146.05-.27.154-.374a.514.514 0 0 1 .377-.154h1.745c.566 0 1.026.159 1.383.478.357.318.536.785.536 1.399s-.177 1.077-.533 1.398c-.355.321-.817.484-1.385.484H23v1.943a.512.512 0 0 1-.152.375c-.1.1-.226.151-.375.151a.514.514 0 0 1-.378-.154.506.506 0 0 1-.155-.374v.003Zm1.059-2.896h1.134c.287 0 .509-.08.668-.243.16-.162.239-.392.239-.686 0-.294-.081-.526-.242-.685-.16-.16-.382-.239-.666-.239h-1.135v1.855L23 4.27ZM26.842 4.549c0-1.064.249-1.866.749-2.404.5-.539 1.202-.81 2.107-.81.432 0 .828.088 1.191.26.362.173.651.41.869.712.042.06.063.123.063.192a.287.287 0 0 1-.29.295.303.303 0 0 1-.241-.12 1.81 1.81 0 0 0-.671-.553 2.018 2.018 0 0 0-.92-.215c-.714 0-1.264.22-1.645.662-.38.441-.571 1.103-.571 1.984 0 .88.187 1.593.56 2.01.375.418.927.626 1.656.626.318 0 .62-.063.905-.19.285-.128.513-.314.686-.562a.276.276 0 0 1 .241-.12c.084 0 .153.029.207.086a.287.287 0 0 1 .083.21c0 .063-.018.12-.054.174-.2.293-.49.527-.869.704-.38.177-.78.265-1.2.265-.919 0-1.623-.26-2.116-.781-.494-.521-.74-1.328-.74-2.422v-.003ZM33.042 7.19c-.337-.37-.507-.92-.507-1.654 0-.734.168-1.281.504-1.646.336-.365.809-.548 1.417-.548.607 0 1.083.183 1.42.548.334.365.502.914.502 1.646 0 .732-.168 1.285-.503 1.654-.334.369-.809.553-1.42.553-.61 0-1.075-.184-1.413-.553Zm.087-1.654c0 1.118.443 1.676 1.327 1.676.884 0 1.326-.558 1.326-1.676 0-1.118-.442-1.667-1.326-1.667-.884 0-1.327.555-1.327 1.667ZM37.29 7.404V3.686c0-.084.029-.153.086-.207a.293.293 0 0 1 .21-.083c.084 0 .153.027.207.083a.286.286 0 0 1 .083.207v.294c.093-.185.247-.338.465-.458.217-.12.47-.181.755-.181.271 0 .508.031.712.096.204.064.366.147.488.247.121.101.218.226.293.371.075.146.124.291.15.434.025.142.037.3.037.47v2.444a.276.276 0 0 1-.082.207.286.286 0 0 1-.207.082.29.29 0 0 1-.21-.082.277.277 0 0 1-.086-.207V5.078c0-.193-.015-.36-.047-.498a1.104 1.104 0 0 0-.165-.38.718.718 0 0 0-.337-.256 1.503 1.503 0 0 0-.545-.085c-.813 0-1.22.427-1.22 1.282v2.262a.276.276 0 0 1-.083.207.286.286 0 0 1-.206.082.29.29 0 0 1-.21-.082.277.277 0 0 1-.086-.207l-.002.001ZM41.584 6.899c0-.075.025-.137.076-.188a.254.254 0 0 1 .188-.076c.075 0 .14.03.2.09.3.3.69.451 1.162.451.287 0 .52-.052.7-.159.18-.106.27-.27.27-.493a.463.463 0 0 0-.104-.3.747.747 0 0 0-.273-.21 3.832 3.832 0 0 0-.387-.155c-.144-.05-.291-.1-.44-.153a3.603 3.603 0 0 1-.44-.186 2.328 2.328 0 0 1-.387-.242.974.974 0 0 1-.273-.344 1.08 1.08 0 0 1-.102-.48c0-.363.13-.638.392-.824.26-.186.597-.279 1.008-.279.635 0 1.099.195 1.39.586.045.06.067.118.067.174a.25.25 0 0 1-.078.187.263.263 0 0 1-.19.077.26.26 0 0 1-.193-.081 1.426 1.426 0 0 0-.43-.288 1.46 1.46 0 0 0-.566-.096c-.236 0-.43.043-.584.129-.153.087-.23.228-.23.424 0 .116.035.218.103.31a.749.749 0 0 0 .27.221c.113.057.242.113.387.164l.44.155c.147.052.294.114.44.186.145.072.274.15.388.232a.915.915 0 0 1 .275.33c.069.137.103.291.103.464 0 .269-.07.495-.21.681-.14.186-.324.321-.554.405-.23.083-.493.125-.79.125-.346 0-.66-.068-.938-.201-.28-.134-.49-.288-.626-.46a.303.303 0 0 1-.063-.175l-.002-.001ZM45.48 5.536c0-.7.166-1.24.496-1.622.33-.381.794-.572 1.39-.572.235 0 .446.029.635.087.19.059.346.138.47.239.123.1.23.211.317.33.088.119.154.25.2.389.044.14.076.268.095.387a2.447 2.447 0 0 1 .023.558 1.02 1.02 0 0 1-.038.177.26.26 0 0 1-.11.152.396.396 0 0 1-.21.05h-2.673c0 .455.123.817.369 1.087s.584.405 1.013.405c.238 0 .44-.034.607-.105.167-.07.33-.166.493-.288a.307.307 0 0 1 .165-.058.25.25 0 0 1 .187.078.263.263 0 0 1 .077.19.294.294 0 0 1-.1.21 1.61 1.61 0 0 1-.25.2 2.02 2.02 0 0 1-.48.207c-.22.072-.452.106-.7.106-.628 0-1.114-.181-1.458-.543-.343-.361-.516-.917-.516-1.664h-.002Zm.595-.339h2.462c0-.179-.018-.34-.054-.488a1.413 1.413 0 0 0-.177-.417.83.83 0 0 0-.362-.31 1.352 1.352 0 0 0-.579-.112c-.39 0-.696.118-.918.353-.222.236-.347.56-.374.974h.002ZM50.017 7.404V3.686c0-.084.028-.153.085-.207a.293.293 0 0 1 .21-.083c.085 0 .154.027.208.083a.287.287 0 0 1 .082.207v.294c.093-.185.248-.338.465-.458.218-.12.47-.181.755-.181.272 0 .509.031.713.096.204.064.366.147.488.247.121.101.217.226.292.371.075.146.125.291.15.434.026.142.038.3.038.47v2.444a.276.276 0 0 1-.083.207.287.287 0 0 1-.207.082.29.29 0 0 1-.21-.082.277.277 0 0 1-.085-.207V5.078c0-.193-.015-.36-.047-.498a1.106 1.106 0 0 0-.165-.38.718.718 0 0 0-.338-.256 1.504 1.504 0 0 0-.544-.085c-.814 0-1.22.427-1.22 1.282v2.262a.276.276 0 0 1-.083.207.287.287 0 0 1-.207.082.29.29 0 0 1-.21-.082.277.277 0 0 1-.085-.207l-.002.001ZM54.277 3.938a.263.263 0 0 1-.078-.195.27.27 0 0 1 .078-.196.26.26 0 0 1 .194-.081h.357v-.96a.27.27 0 0 1 .09-.203.284.284 0 0 1 .205-.087c.078 0 .149.028.206.085a.279.279 0 0 1 .085.206v.96h.6c.077 0 .142.027.193.081a.276.276 0 0 1 .078.197.264.264 0 0 1-.078.195.262.262 0 0 1-.194.078h-.599v2.525c0 .194.048.344.146.45.096.106.225.158.387.158.081 0 .149.026.204.078a.256.256 0 0 1 .083.195.251.251 0 0 1-.083.194.284.284 0 0 1-.204.078c-.354 0-.629-.105-.824-.317-.195-.211-.292-.49-.292-.836V4.018h-.357a.258.258 0 0 1-.194-.078l-.003-.002Z" /></g><defs><path fill="#ffffff" d="M0 0h55.857v7.753H0z" /></defs></svg><span class="screen-reader-text"> (opens in a new window)</span></a></div></div></div><div id="wpconsent-preferences-modal" class="wpconsent-preferences-modal" style="display:none;" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="wpconsent-preferences-title" part="wpconsent-preferences-modal"><div class="wpconsent-preferences-content" part="wpconsent-preferences-content"><div class="wpconsent-preferences-header" part="wpconsent-preferences-header"><h2 id="wpconsent-preferences-title" tabindex="0" part="wpconsent-preferences-title">Cookie Preferences</h2><div class="wpconsent-preferences-header-right"><button class="wpconsent-preferences-header-close" id="wpconsent-preferences-close" aria-label="Close" aria-label="Close" part="wpconsent-preferences-close">&times;</button></div></div><div class="wpconsent-preferences-body"><div class="wpconsent_preferences_panel_description" part="wpconsent-preferences-description"><p>Manage your cookie preferences below:</p>
+</div><div class="wpconsent-preference-cookies wpconsent-preferences-accordion" part="wpconsent-preferences-accordion"><div class="wpconsent-preferences-accordion-item wpconsent-cookie-category wpconsent-cookie-category-essential" part="wpconsent-accordion-item wpconsent-category-essential"><div class="wpconsent-preferences-accordion-header" part="wpconsent-accordion-header"><div class="wpconsent-cookie-category-text"><button class="wpconsent-preferences-accordion-toggle" aria-expanded="false" part="wpconsent-accordion-toggle"><span class="wpconsent-preferences-accordion-arrow" aria-hidden="true"></span><span class="screen-reader-text">Toggle Essential</span></button><label for="cookie-category-essential">Essential</label></div><div class="wpconsent-cookie-category-checkbox"><label class="wpconsent-preferences-checkbox-toggle wpconsent-preferences-checkbox-toggle-disabled" part="wpconsent-checkbox-toggle wpconsent-checkbox-toggle-disabled"><input type="checkbox" id="cookie-category-essential" checked disabled><span class="wpconsent-preferences-checkbox-toggle-slider"></span></label></div></div><div class="wpconsent-preferences-accordion-content" part="wpconsent-accordion-content"><p class="wpconsent-category-description" tabindex="0">Essential cookies enable basic functions and are necessary for the proper function of the website.</p><div class="wpconsent-preferences-cookies-list" part="wpconsent-cookies-list"><div class="wpconsent-preferences-list-header" part="wpconsent-cookies-list-header"><div class="cookie-name">Name</div><div class="cookie-desc">Description</div><div class="cookie-duration">Duration</div></div><div class="wpconsent-preferences-list-item" data-cookie-id="1185" part="wpconsent-cookies-list-item"><div class="cookie-name">Cookie Preferences</div><div class="cookie-desc">This cookie is used to store the user's cookie consent preferences.</div><div class="cookie-duration">30 days</div></div></div></div></div></div></div><div class="wpconsent-preferences-actions" part="wpconsent-preferences-actions"><div class="wpconsent-preferences-buttons wpconsent-button-size-small wpconsent-button-corner-slightly-rounded wpconsent-button-type-filled" part="wpconsent-preferences-buttons"><div class="wpconsent-preferences-buttons-left" part="wpconsent-preferences-buttons-left"><button class="wpconsent-accept-all wpconsent-banner-button" part="wpconsent-preferences-accept-button">Accept All</button><button class="wpconsent-close-preferences wpconsent-banner-button" part="wpconsent-preferences-cancel-button">Close</button></div><button class="wpconsent-save-preferences wpconsent-banner-button" part="wpconsent-preferences-save-button">Save and Close</button></div></div><div class="wpconsent-preferences-powered-by"><div class="wpconsent-powered-by"><a style="color: #ffffff" href="https://wpconsent.com/powered-by/?utm_source=liteplugin&#038;utm_medium=poweredby&#038;utm_campaign" target="_blank" rel="nofollow noopener noreferrer"><span class="wpconsent-powered-by-text">Powered by</span> <svg class="wpconsent-icon wpconsent-icon-logo-mono" width="80" height="12" viewBox="0 0 57 9" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)" fill="#ffffff"><path d="M4.84 1.006a.34.34 0 0 0-.333-.34H2.564a.336.336 0 0 0-.292.172L.735 3.566a.336.336 0 0 0 .293.501h1.94a.342.342 0 0 0 .292-.173l1.531-2.713H4.79a.333.333 0 0 0 .05-.175ZM11.628 4.545a.33.33 0 0 0-.048-.171L9.76 1.144 8.403 3.547l.474.84a.33.33 0 0 1 .003.314L7.09 7.88a.341.341 0 0 0 .272.539h1.937a.336.336 0 0 0 .292-.17l2.005-3.558-.003-.002a.34.34 0 0 0 .034-.145h.002Z"/><path d="M9.76 1.144 9.493.667 8.17 2.994l-.038.066-.294.518a.34.34 0 0 1 .569-.03L9.76 1.144ZM6.995.667h-.012a.336.336 0 0 0-.303.19l-2.636 4.66a.345.345 0 0 1-.299.175.348.348 0 0 1-.303-.183l-.447-.792a.337.337 0 0 0-.294-.171l-1.936.006a.336.336 0 0 0-.293.5l1.802 3.199c.06.105.171.17.293.17h2.314c.129 0 .239-.071.297-.178L6.832 5.34l1.002-1.762.294-.518.038-.066L9.49.667H6.995ZM13.896 1.921c0-.148.053-.274.157-.378a.518.518 0 0 1 .38-.155c.136 0 .247.038.334.114.087.077.144.161.17.253l1.065 3.843 1.041-3.825a.48.48 0 0 1 .188-.28.516.516 0 0 1 .627.002c.096.072.16.167.188.285l1.041 3.825 1.076-3.856a.523.523 0 0 1 .501-.36.51.51 0 0 1 .37.151.508.508 0 0 1 .154.374.505.505 0 0 1-.027.163L19.596 7.32a.518.518 0 0 1-.488.375.47.47 0 0 1-.31-.11.546.546 0 0 1-.182-.285l-1.057-3.747-1.053 3.749a.525.525 0 0 1-.19.283.51.51 0 0 1-.325.11.514.514 0 0 1-.315-.102.5.5 0 0 1-.19-.264l-1.564-5.242a.514.514 0 0 1-.027-.165h.002ZM21.94 7.167V1.992c0-.146.05-.27.154-.374a.514.514 0 0 1 .377-.154h1.745c.566 0 1.026.159 1.383.478.357.318.536.785.536 1.399s-.177 1.077-.533 1.398c-.355.321-.817.484-1.385.484H23v1.943a.512.512 0 0 1-.152.375c-.1.1-.226.151-.375.151a.514.514 0 0 1-.378-.154.506.506 0 0 1-.155-.374v.003Zm1.059-2.896h1.134c.287 0 .509-.08.668-.243.16-.162.239-.392.239-.686 0-.294-.081-.526-.242-.685-.16-.16-.382-.239-.666-.239h-1.135v1.855L23 4.27ZM26.842 4.549c0-1.064.249-1.866.749-2.404.5-.539 1.202-.81 2.107-.81.432 0 .828.088 1.191.26.362.173.651.41.869.712.042.06.063.123.063.192a.287.287 0 0 1-.29.295.303.303 0 0 1-.241-.12 1.81 1.81 0 0 0-.671-.553 2.018 2.018 0 0 0-.92-.215c-.714 0-1.264.22-1.645.662-.38.441-.571 1.103-.571 1.984 0 .88.187 1.593.56 2.01.375.418.927.626 1.656.626.318 0 .62-.063.905-.19.285-.128.513-.314.686-.562a.276.276 0 0 1 .241-.12c.084 0 .153.029.207.086a.287.287 0 0 1 .083.21c0 .063-.018.12-.054.174-.2.293-.49.527-.869.704-.38.177-.78.265-1.2.265-.919 0-1.623-.26-2.116-.781-.494-.521-.74-1.328-.74-2.422v-.003ZM33.042 7.19c-.337-.37-.507-.92-.507-1.654 0-.734.168-1.281.504-1.646.336-.365.809-.548 1.417-.548.607 0 1.083.183 1.42.548.334.365.502.914.502 1.646 0 .732-.168 1.285-.503 1.654-.334.369-.809.553-1.42.553-.61 0-1.075-.184-1.413-.553Zm.087-1.654c0 1.118.443 1.676 1.327 1.676.884 0 1.326-.558 1.326-1.676 0-1.118-.442-1.667-1.326-1.667-.884 0-1.327.555-1.327 1.667ZM37.29 7.404V3.686c0-.084.029-.153.086-.207a.293.293 0 0 1 .21-.083c.084 0 .153.027.207.083a.286.286 0 0 1 .083.207v.294c.093-.185.247-.338.465-.458.217-.12.47-.181.755-.181.271 0 .508.031.712.096.204.064.366.147.488.247.121.101.218.226.293.371.075.146.124.291.15.434.025.142.037.3.037.47v2.444a.276.276 0 0 1-.082.207.286.286 0 0 1-.207.082.29.29 0 0 1-.21-.082.277.277 0 0 1-.086-.207V5.078c0-.193-.015-.36-.047-.498a1.104 1.104 0 0 0-.165-.38.718.718 0 0 0-.337-.256 1.503 1.503 0 0 0-.545-.085c-.813 0-1.22.427-1.22 1.282v2.262a.276.276 0 0 1-.083.207.286.286 0 0 1-.206.082.29.29 0 0 1-.21-.082.277.277 0 0 1-.086-.207l-.002.001ZM41.584 6.899c0-.075.025-.137.076-.188a.254.254 0 0 1 .188-.076c.075 0 .14.03.2.09.3.3.69.451 1.162.451.287 0 .52-.052.7-.159.18-.106.27-.27.27-.493a.463.463 0 0 0-.104-.3.747.747 0 0 0-.273-.21 3.832 3.832 0 0 0-.387-.155c-.144-.05-.291-.1-.44-.153a3.603 3.603 0 0 1-.44-.186 2.328 2.328 0 0 1-.387-.242.974.974 0 0 1-.273-.344 1.08 1.08 0 0 1-.102-.48c0-.363.13-.638.392-.824.26-.186.597-.279 1.008-.279.635 0 1.099.195 1.39.586.045.06.067.118.067.174a.25.25 0 0 1-.078.187.263.263 0 0 1-.19.077.26.26 0 0 1-.193-.081 1.426 1.426 0 0 0-.43-.288 1.46 1.46 0 0 0-.566-.096c-.236 0-.43.043-.584.129-.153.087-.23.228-.23.424 0 .116.035.218.103.31a.749.749 0 0 0 .27.221c.113.057.242.113.387.164l.44.155c.147.052.294.114.44.186.145.072.274.15.388.232a.915.915 0 0 1 .275.33c.069.137.103.291.103.464 0 .269-.07.495-.21.681-.14.186-.324.321-.554.405-.23.083-.493.125-.79.125-.346 0-.66-.068-.938-.201-.28-.134-.49-.288-.626-.46a.303.303 0 0 1-.063-.175l-.002-.001ZM45.48 5.536c0-.7.166-1.24.496-1.622.33-.381.794-.572 1.39-.572.235 0 .446.029.635.087.19.059.346.138.47.239.123.1.23.211.317.33.088.119.154.25.2.389.044.14.076.268.095.387a2.447 2.447 0 0 1 .023.558 1.02 1.02 0 0 1-.038.177.26.26 0 0 1-.11.152.396.396 0 0 1-.21.05h-2.673c0 .455.123.817.369 1.087s.584.405 1.013.405c.238 0 .44-.034.607-.105.167-.07.33-.166.493-.288a.307.307 0 0 1 .165-.058.25.25 0 0 1 .187.078.263.263 0 0 1 .077.19.294.294 0 0 1-.1.21 1.61 1.61 0 0 1-.25.2 2.02 2.02 0 0 1-.48.207c-.22.072-.452.106-.7.106-.628 0-1.114-.181-1.458-.543-.343-.361-.516-.917-.516-1.664h-.002Zm.595-.339h2.462c0-.179-.018-.34-.054-.488a1.413 1.413 0 0 0-.177-.417.83.83 0 0 0-.362-.31 1.352 1.352 0 0 0-.579-.112c-.39 0-.696.118-.918.353-.222.236-.347.56-.374.974h.002ZM50.017 7.404V3.686c0-.084.028-.153.085-.207a.293.293 0 0 1 .21-.083c.085 0 .154.027.208.083a.287.287 0 0 1 .082.207v.294c.093-.185.248-.338.465-.458.218-.12.47-.181.755-.181.272 0 .509.031.713.096.204.064.366.147.488.247.121.101.217.226.292.371.075.146.125.291.15.434.026.142.038.3.038.47v2.444a.276.276 0 0 1-.083.207.287.287 0 0 1-.207.082.29.29 0 0 1-.21-.082.277.277 0 0 1-.085-.207V5.078c0-.193-.015-.36-.047-.498a1.106 1.106 0 0 0-.165-.38.718.718 0 0 0-.338-.256 1.504 1.504 0 0 0-.544-.085c-.814 0-1.22.427-1.22 1.282v2.262a.276.276 0 0 1-.083.207.287.287 0 0 1-.207.082.29.29 0 0 1-.21-.082.277.277 0 0 1-.085-.207l-.002.001ZM54.277 3.938a.263.263 0 0 1-.078-.195.27.27 0 0 1 .078-.196.26.26 0 0 1 .194-.081h.357v-.96a.27.27 0 0 1 .09-.203.284.284 0 0 1 .205-.087c.078 0 .149.028.206.085a.279.279 0 0 1 .085.206v.96h.6c.077 0 .142.027.193.081a.276.276 0 0 1 .078.197.264.264 0 0 1-.078.195.262.262 0 0 1-.194.078h-.599v2.525c0 .194.048.344.146.45.096.106.225.158.387.158.081 0 .149.026.204.078a.256.256 0 0 1 .083.195.251.251 0 0 1-.083.194.284.284 0 0 1-.204.078c-.354 0-.629-.105-.824-.317-.195-.211-.292-.49-.292-.836V4.018h-.357a.258.258 0 0 1-.194-.078l-.003-.002Z"/></g><defs><clipPath id="a"><path fill="#ffffff" transform="translate(.429 .667)" d="M0 0h55.857v7.753H0z"/></clipPath></defs></svg><span class="screen-reader-text"> (opens in a new window)</span></a></div></div></div></div><button id="wpconsent-consent-floating" class="wpconsent-consent-floating-button" part="wpconsent-settings-button" style="background-color: #04194e; color: #ffffff;" aria-label="Cookie Preferences"><svg class="wpconsent-icon wpconsent-icon-preferences" width="24" height="24" viewBox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg"><path d="m370-80-16-128q-13-5-24.5-12T307-235l-119 50L78-375l103-78q-1-7-1-13.5v-27q0-6.5 1-13.5L78-585l110-190 119 50q11-8 23-15t24-12l16-128h220l16 128q13 5 24.5 12t22.5 15l119-50 110 190-103 78q1 7 1 13.5v27q0 6.5-2 13.5l103 78-110 190-118-50q-11 8-23 15t-24 12L590-80H370Zm70-80h79l14-106q31-8 57.5-23.5T639-327l99 41 39-68-86-65q5-14 7-29.5t2-31.5q0-16-2-31.5t-7-29.5l86-65-39-68-99 42q-22-23-48.5-38.5T533-694l-13-106h-79l-14 106q-31 8-57.5 23.5T321-633l-99-41-39 68 86 64q-5 15-7 30t-2 32q0 16 2 31t7 30l-86 65 39 68 99-42q22 23 48.5 38.5T427-266l13 106Zm42-180q58 0 99-41t41-99q0-58-41-99t-99-41q-59 0-99.5 41T342-480q0 58 40.5 99t99.5 41Zm-2-140Z" fill="#ffffff" /></svg></button></template></div>			<script>
+				const lazyloadRunObserver = () => {
+					const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
+					const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
+						entries.forEach( ( entry ) => {
+							if ( entry.isIntersecting ) {
+								let lazyloadBackground = entry.target;
+								if( lazyloadBackground ) {
+									lazyloadBackground.classList.add( 'e-lazyloaded' );
+								}
+								lazyloadBackgroundObserver.unobserve( entry.target );
+							}
+						});
+					}, { rootMargin: '200px 0px 200px 0px' } );
+					lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
+						lazyloadBackgroundObserver.observe( lazyloadBackground );
+					} );
+				};
+				const events = [
+					'DOMContentLoaded',
+					'elementor/lazyload/observe',
+				];
+				events.forEach( ( event ) => {
+					document.addEventListener( event, lazyloadRunObserver );
+				} );
+			</script>
+			<script id="wpconsent-frontend-js-js-extra">
+var wpconsent = {"consent_duration":"30","css_url":"https://vegasbrownmd.com/wp-content/plugins/wpconsent-cookies-banner-privacy-suite/build/frontend.css","css_version":"d55abb9de77669626d2a","default_allow":"","consent_type":"optin","manual_toggle_services":"","slugs":["essential","statistics","marketing"],"enable_consent_banner":"1","enable_script_blocking":"1","enable_content_blocking":"0","enable_consent_floating":"","enable_shared_consent":"","cookie_domain":"","accept_button_enabled":"1","cancel_button_enabled":"1","preferences_button_enabled":"1","respect_gpc":"","gpc_toast_message":"GPC Signal Honored","gpc_toast_duration":"10000","gpc_toast_enabled":"1"};
+//# sourceURL=wpconsent-frontend-js-js-extra
+</script>
+<script src="https://vegasbrownmd.com/wp-content/plugins/wpconsent-cookies-banner-privacy-suite/build/frontend.js?ver=d55abb9de77669626d2a" id="wpconsent-frontend-js-js"></script>
+<script src="https://vegasbrownmd.com/wp-content/themes/hello-elementor/assets/js/hello-frontend.js?ver=3.4.6" id="hello-theme-frontend-js"></script>
+<script src="https://vegasbrownmd.com/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=4.1.2" id="elementor-webpack-runtime-js"></script>
+<script src="https://vegasbrownmd.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=4.1.2" id="elementor-frontend-modules-js"></script>
+<script src="https://vegasbrownmd.com/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id="jquery-ui-core-js"></script>
+<script id="elementor-frontend-js-before">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close","a11yCarouselPrevSlideMessage":"Previous slide","a11yCarouselNextSlideMessage":"Next slide","a11yCarouselFirstSlideMessage":"This is the first slide","a11yCarouselLastSlideMessage":"This is the last slide","a11yCarouselPaginationBulletMessage":"Go to slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},"hasCustomBreakpoints":false},"version":"4.1.2","is_static":false,"experimentalFeatures":{"additional_custom_breakpoints":true,"theme_builder_v2":true,"hello-theme-header-footer":true,"global_classes_should_enforce_capabilities":true,"e_variables":true,"e_opt_in_v4_page":true,"e_components":true,"e_interactions":true,"e_widget_creation":true,"import-export-customization":true,"e_pro_atomic_form":true,"e_pro_variables":true,"e_pro_interactions":true},"urls":{"assets":"https:\/\/vegasbrownmd.com\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/vegasbrownmd.com\/wp-admin\/admin-ajax.php","uploadUrl":"https:\/\/vegasbrownmd.com\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"a5d97bb0e3","atomicFormsSendForm":"06eb3134e1"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"body_background_background":"classic","active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","hello_header_logo_type":"title","hello_header_menu_layout":"horizontal"},"post":{"id":52943,"title":"EMS%20protocols%20%E2%80%93%20Vegas%20Brown%2C%20MD","excerpt":"","featuredImage":false}};
+//# sourceURL=elementor-frontend-js-before
+</script>
+<script src="https://vegasbrownmd.com/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=4.1.2" id="elementor-frontend-js"></script>
+<script src="https://vegasbrownmd.com/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=4.1.1" id="elementor-pro-webpack-runtime-js"></script>
+<script src="https://vegasbrownmd.com/wp-includes/js/dist/hooks.min.js?ver=dd5603f07f9220ed27f1" id="wp-hooks-js"></script>
+<script src="https://vegasbrownmd.com/wp-includes/js/dist/i18n.min.js?ver=c26c3dc7bed366793375" id="wp-i18n-js"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+</script>
+<script id="elementor-pro-frontend-js-before">
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/vegasbrownmd.com\/wp-admin\/admin-ajax.php","nonce":"adda282110","urls":{"assets":"https:\/\/vegasbrownmd.com\/wp-content\/plugins\/elementor-pro\/assets\/","rest":"https:\/\/vegasbrownmd.com\/wp-json\/"},"settings":{"lazy_load_background_images":true},"popup":{"hasPopUps":false},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"},"x-twitter":{"title":"X"},"threads":{"title":"Threads"}},"facebook_sdk":{"lang":"en_US","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/vegasbrownmd.com\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+//# sourceURL=elementor-pro-frontend-js-before
+</script>
+<script src="https://vegasbrownmd.com/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=4.1.1" id="elementor-pro-frontend-js"></script>
+<script src="https://vegasbrownmd.com/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=4.1.1" id="pro-elements-handlers-js"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://vegasbrownmd.com/wp-includes/js/wp-emoji-release.min.js?ver=6.9.4"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=https://vegasbrownmd.com/wp-includes/js/wp-emoji-loader.min.js
+</script>
+
+</body>
+</html>
